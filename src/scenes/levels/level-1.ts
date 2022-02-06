@@ -20,10 +20,20 @@ export class Level1 extends Scene {
         this.groundLayer = this.map.createLayer('Ground', this.tileset, 0, 0)
         this.wallsLayer = this.map.createLayer('Walls', this.tileset, 0,0)
         this.physics.world.setBounds(0,0, this.wallsLayer.width, this.wallsLayer.height)
+        this.wallsLayer.setCollisionByProperty({collides: true})
+        this.showDebugWalls()
+    }
+    private showDebugWalls(): void {
+        const debugGraphics = this.add.graphics().setAlpha(0.7)
+        this.wallsLayer.renderDebug(debugGraphics, {
+            tileColor: null,
+            collidingTileColor: new Phaser.Display.Color(243, 243, 48, 255)
+        })
     }
     create(): void {
         this.initMap()
         this.player = new Player(this, 100, 100)
+        this.physics.add.collider(this.player, this.wallsLayer)
     }
     update(): void {
         this.player.update()

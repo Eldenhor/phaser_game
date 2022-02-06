@@ -13,5 +13,8 @@
   "include": [
     "src/**/*.ts",
     "typings/**/*.d.ts"
+  ],
+  "exclude": [
+    "tiled/dungeon-16-16.tsx"
   ]
 }
