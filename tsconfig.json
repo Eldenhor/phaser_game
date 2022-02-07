@@ -3,6 +3,8 @@
     "target": "es5",
     "module": "es2015",
     "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
     "typeRoots": [
       "./typings",
       "./node_modules/"
@@ -13,8 +15,5 @@
   "include": [
     "src/**/*.ts",
     "typings/**/*.d.ts"
-  ],
-  "exclude": [
-    "tiled/dungeon-16-16.tsx"
   ]
 }

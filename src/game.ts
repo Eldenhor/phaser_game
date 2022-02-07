@@ -7,6 +7,8 @@ const gameConfig: Types.Core.GameConfig = {
   type: Phaser.WEBGL,
   parent: 'game',
   backgroundColor: '#351f1b',
+  antialias: false,
+  pixelArt: true,
   scale: {
     mode: Phaser.Scale.ScaleModes.NONE,
     width: window.innerWidth,

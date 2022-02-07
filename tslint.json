@@ -14,7 +14,7 @@
       "no-consecutive-blank-lines": true,
       "object-literal-sort-keys": false
     },
-    "jsRules": {
+  "jsRules": {
       "max-line-length": {
         "options": [
           120
